@@ -17,4 +17,12 @@ describe("getRandomNumber", function () {
             expect(nSorted).to.be.above(-1);
         }
     });
+
+    it("should return above 0 when pass false as third parameter", function () {
+        let x = 10;
+        while (--x) {
+            let nSorted = getRandomNumber(0, 1, false);
+            expect(nSorted).to.be.above(-1);
+        }
+    });
 });
